@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stretch Evolve JS Assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./scss/main.scss" />
+  </head>
+  <body>
+    <header >
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" target="_blank" href="https://match.com">
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Match_logo_2021.png"
+            alt="Logo for the site Match.com"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Start</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Matches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Connections</a>
+            </li>
+          </ul>
+        </div>
+        
+
+      </nav>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="intro__siteInfo">
+          Welcome to Match.com, the premier online dating site where singles
+          come to find meaningful connections.</p>
+        
+          <p class="intro__siteInfo">
+            Explore the amazing candidates below and uncover their captivating
+          profiles. Join Match.com today and embark on an exciting journey to
+          find your perfect match!
+        </p>
+
+      </div>
+        <div class="genderSortContainer genderSortBtn">
+          <div  class="genderSortBtn">
+          <label for="genderSort">Sort by users:</label>
+          <select id="genderSort" class="form-control">
+            <option value="male" class="sortMaleUsers" >Male</option>
+            <option value="female" class="sortFemaleUsers">Female</option>
+            <option value="reset" class="resetUsers">Show all Users</option>
+          </select>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="userProfilesContainer"></div>
+      <div class="pagePagination"></div>
+    </main>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

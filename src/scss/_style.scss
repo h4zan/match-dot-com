@@ -1,0 +1,203 @@
+@use './variables';
+@use './mixins';
+@import url(https://fonts.googleapis.com/css?family=Vidaloka|Oswald:400,300);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Vidaloka', Arial, Helvetica, sans-serif;
+
+  font-size: 1rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+a:visited,
+a:active,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+.logo {
+  width: 150px;
+  height: 25px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin: 8px;
+
+  &__siteInfo {
+    text-align: center;
+    max-width: 600px;
+    @include mixins.tablet {
+      font-size: 1.5rem;
+    }
+    @include mixins.tablet {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.genderSortBtn,
+.pagePagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+  @include mixins.tablet {
+    justify-content: end;
+    align-items: flex-end;
+    margin-right: 10%;
+  }
+
+  @include mixins.laptop {
+    justify-content: end;
+    align-items: flex-end;
+    margin-right: 3%;
+  }
+}
+
+.pagePagination {
+  @include mixins.tablet {
+    margin-right: 30%;
+  }
+
+  @include mixins.laptop {
+    margin-right: 10%;
+  }
+}
+.nextPageBtn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 9px;
+  cursor: pointer;
+  color: #212529;
+  border: solid 0.5px #212529;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  @include mixins.laptop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px;
+  }
+}
+.userProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 13px;
+  left: 5px;
+  height: auto;
+  width: 300px;
+  border: 3px double #7f7d7d;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include mixins.laptop {
+    width: 25%;
+  }
+  @include mixins.desktop {
+    width: 23%;
+  }
+  &__female {
+    background-color: #f2edef;
+  }
+
+  &__male {
+    background-color: #edf2f0;
+  }
+
+  &__img {
+    position: relative;
+    width: 100px;
+    border-radius: 100%;
+    border: 1px solid #7f7d7d;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    @include mixins.laptop {
+      display: inline;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    line-height: 1.5rem;
+
+    @include mixins.laptop {
+      font-size: 1.2rem;
+    }
+    @include mixins.laptop {
+      font-size: 1.3rem;
+    }
+
+    &__email {
+      word-wrap: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 9px;
+    cursor: pointer;
+    color: #212529;
+    border: solid 0.5px #212529;
+    margin-bottom: 30px;
+  }
+}
